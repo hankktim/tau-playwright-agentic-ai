@@ -251,10 +251,12 @@ test('Verify Registration Rejects Empty Submission', async ({ page }) => {
 
 ### Tagging in Practice
 
+Use Playwright's `tag` option to assign tag metadata. Text such as `@smoke` in a test title can be matched with `--grep`, but is not a formal tag.
+
 ```typescript
-test('Verify Login Works @smoke', async ({ page }) => { /* ... */ });
-test('Verify 50-Character Name Limit @edge', async ({ page }) => { /* ... */ });
-test('Verify Form Layout @visual', async ({ page }) => { /* ... */ });
+test('Verify Login Works', { tag: '@smoke' }, async ({ page }) => { /* ... */ });
+test('Verify 50-Character Name Limit', { tag: '@edge' }, async ({ page }) => { /* ... */ });
+test('Verify Form Layout', { tag: '@visual' }, async ({ page }) => { /* ... */ });
 ```
 
 ## Test Size Guidelines

@@ -6,9 +6,9 @@ export default defineConfig({
   reporter: 'html',
   use: {
     baseURL: 'https://ui.rexjones2.com/login',
-    headless: false,
+    headless: true,
     trace: 'on',
-    screenshot: 'on',
+    screenshot: 'only-on-failure',
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } }

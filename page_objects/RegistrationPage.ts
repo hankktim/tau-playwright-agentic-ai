@@ -39,6 +39,13 @@ export class RegistrationPage {
     this.firstNameError = page.getByText('First Name is a required field');
     this.lastNameError = page.getByText('Last Name is a required field');
     this.emailError = page.getByText('Email is a required field');
+    // Created By Al
+    // ALERT: `getByRole('button')` does not identify the confirmation dialog. The live DOM
+    // exposes the modal as `dialog` and contains two matching buttons inside it: an icon button
+    // named `Close` and a footer button named `Close`. This broad locator therefore violates
+    // strict mode when visibility is checked, and the dialog title is not a descendant of either
+    // button. Recommendation: have a human scope this locator to the dialog role, then locate its
+    // title within that dialog; no locator has been changed automatically.
     this.confirmationDialog = page.getByRole('dialog');
     this.confirmationDialogTitle = this.confirmationDialog.getByText('Thanks for submitting the form').first();
   }

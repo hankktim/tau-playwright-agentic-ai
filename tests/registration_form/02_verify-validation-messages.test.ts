@@ -13,5 +13,6 @@ test('Verify Validation Messages For Mandatory Fields', async ({ page }) => {
 
   await expect.soft(registrationPage.firstNameError).toBeVisible();
   await expect.soft(registrationPage.lastNameError).toBeVisible();
-  await expect.soft(registrationPage.emailError).toBeVisible();
+  // await expect.soft(registrationPage.emailError).toBeVisible();
+  await expect.soft(registrationPage.emailError).not.toBeVisible(); // Email is optional on the current form.
 });

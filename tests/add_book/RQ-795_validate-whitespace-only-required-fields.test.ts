@@ -5,7 +5,7 @@ import { LoginPage } from '../../page_objects/LoginPage';
 import { HomePage } from '../../page_objects/HomePage';
 import { AddBookPage } from '../../page_objects/AddBookPage';
 
-test('Verify Whitespace-Only Required Fields Bypass Validation @edge', async ({ page }) => {
+test('Verify Whitespace-Only Required Fields Bypass Validation', { tag: '@edge' }, async ({ page }) => {
   // Arrange
   await page.goto('/');
   const loginPage = new LoginPage(page);
