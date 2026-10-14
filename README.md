@@ -113,6 +113,8 @@ This project can be driven by three different Playwright-related tools. They ove
 | **Playwright Test MCP** (`npx playwright run-test-mcp-server`, pre-configured in `.vscode/mcp.json`, installed via VS Code) | Exposes this project's actual Playwright test runner over MCP. Ships with 3 dedicated agents — [playwright-test-planner](.github/agents/playwright-test-planner.agent.md), [-generator](.github/agents/playwright-test-generator.agent.md), and [-healer](.github/agents/playwright-test-healer.agent.md) — to **plan**, **generate**, and **heal** tests, with awareness of this codebase's existing page objects and specs. | Working directly on `tests/*.spec.ts` in this repo — generating new coverage or fixing failures. |
 | **Playwright CLI** ([.claude/skills/playwright-cli](.claude/skills/playwright-cli/)) | A Claude Code skill (not an MCP server) that gives direct terminal-style browser commands. Built for token efficiency (`--raw` output, depth-limited/searchable snapshots, mobile emulation for lighter pages), and can perform much the same browser-automation operations as Playwright MCP — plus, via its own documented plan → generate → heal workflow, much of what Playwright Test MCP's agents do, driven manually through skill instructions rather than dedicated bundled agents. | Interactive, token-conscious browser automation and test authoring inside a Claude Code session. |
 
+For a guided, ALM-free walkthrough of the planner, generator, and healer, see [Playwright Agent Practice](specs/playwright-agent-practice.md).
+
 ## Connect
 
 - LinkedIn: [linkedin.com/in/rexjones34](https://www.linkedin.com/in/rexjones34/)
