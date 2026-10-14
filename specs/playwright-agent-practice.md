@@ -15,7 +15,7 @@ These exercises let you try the planner, generator, and healer agents included i
 3. In the Copilot Chat agent picker, select one of the repository's `playwright-test-*` agents. If VS Code asks to start the `playwright-test` MCP server from `.vscode/mcp.json`, allow it.
 4. The exercises use the demo login already used by the repo tests: username `Success`, password `Success3400`. If those credentials stop working, update the prompts to match the test application's current demo account.
 
-## Exercise 1: Plan Form Validation
+## Exercise 1: Plan Form Validation ✅
 
 **Agent:** `playwright-test-planner`
 
@@ -25,7 +25,7 @@ Ask the planner to explore the live practice form and save a plan containing a s
 
 **Check your result:** The plan should describe the behavior it actually observed, not assume what the form does. Confirm it names both expected messages and starts each scenario from a fresh form.
 
-## Exercise 2: Generate a Test
+## Exercise 2: Generate a Test ✅
 
 **Agent:** `playwright-test-generator`
 
@@ -41,7 +41,7 @@ npx playwright test tests/agent-practice-form.test.ts
 
 Review the generated code and compare its assertions with the plan. The form is at `/automation-practice-form`; the existing page object exposes locators for the first and last name fields and their validation errors.
 
-## Exercise 3: Heal a Deliberate Failure
+## Exercise 3: Heal a Deliberate Failure ✅
 
 **Agent:** `playwright-test-healer`
 

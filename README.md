@@ -115,6 +115,8 @@ This project can be driven by three different Playwright-related tools. They ove
 
 For a guided, ALM-free walkthrough of the planner, generator, and healer, see [Playwright Agent Practice](specs/playwright-agent-practice.md).
 
+For a command-by-command Claude Code walkthrough using the Shadow DOM page, see [Playwright CLI Practice](specs/playwright-cli-practice.md).
+
 ## Connect
 
 - LinkedIn: [linkedin.com/in/rexjones34](https://www.linkedin.com/in/rexjones34/)
