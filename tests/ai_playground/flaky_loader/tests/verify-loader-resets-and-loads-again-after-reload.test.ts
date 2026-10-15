@@ -11,7 +11,7 @@ test.describe('Flaky Loader', () => {
     // 1. Open a fresh challenge page, load the content, and wait for success.
     await page.goto('https://webdriveruniversity.com/AI-Playground/index.html');
     await flakyLoaderPage.clickLoadContentButton();
-    await expect(flakyLoaderPage.loadedMessage).toBeVisible();
+    await expect(flakyLoaderPage.loadedMessage).toBeVisible({ timeout: 15_000 });
     await expect(flakyLoaderPage.loadedMessage).toHaveText('Content loaded successfully!');
 
     // 2. Reload the playground and verify the Flaky Loader returns to its initial state.
@@ -22,7 +22,7 @@ test.describe('Flaky Loader', () => {
 
     // 3. Trigger the loader again and wait for the success content to reappear.
     await flakyLoaderPage.clickLoadContentButton();
-    await expect(flakyLoaderPage.loadedMessage).toBeVisible();
+    await expect(flakyLoaderPage.loadedMessage).toBeVisible({ timeout: 15_000 });
     await expect(flakyLoaderPage.loadedMessage).toHaveText('Content loaded successfully!');
   });
 });

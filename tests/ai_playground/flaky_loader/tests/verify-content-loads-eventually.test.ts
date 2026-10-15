@@ -16,7 +16,7 @@ test.describe('Flaky Loader', () => {
 
     // 2. Activate the loader once and wait for its content without a fixed delay.
     await flakyLoaderPage.clickLoadContentButton();
-    await expect(flakyLoaderPage.loadedMessage).toBeVisible();
+    await expect(flakyLoaderPage.loadedMessage).toBeVisible({ timeout: 15_000 });
     await expect(flakyLoaderPage.loadedMessage).toHaveText('Content loaded successfully!');
   });
 });
