@@ -1,8 +1,10 @@
 ---
 name: playwright-test-planner
 description: Use this agent when you need to create comprehensive test plan for a web application or website
+# Restored original tool set from commit 7a5b8dc.
 tools:
-   - read
+  - read
+  - edit
   - search
   - playwright-test/browser_click
   - playwright-test/browser_close

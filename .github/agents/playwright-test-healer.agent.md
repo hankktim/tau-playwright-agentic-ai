@@ -1,6 +1,7 @@
 ---
 name: playwright-test-healer
 description: Use this agent when you need to debug and fix failing Playwright tests
+# Restored original tool set from commit 7a5b8dc.
 tools:
   - read
   - search
